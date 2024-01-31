@@ -3,8 +3,7 @@
 
 #include "stdafx.h"
 #include <Windows.h>
-
-
+#include "MonitorFile.h"
 BOOL CreateChoiceBat(char *pszBatFileName)
 {
 	int iTime = 5;
@@ -136,6 +135,13 @@ BOOL DelSelf(int iType)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	MonitorFile("C:\\Users\\fuckjp\\Desktop\\");
+	// 等待线程结束
+    WaitForSingleObject(hThread, INFINITE);
+    // 关闭线程句柄
+    CloseHandle(hThread);
+	printf("monitor...\n");
+
 	// 程序自删除
 	BOOL bRet = DelSelf( 0 );
 	if (FALSE == bRet)
@@ -146,6 +152,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	{
 		printf("Selft Delete OK!\n");
 	}
+
+
+	
 
 	system("pause");
 	return 0;
