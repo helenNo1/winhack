@@ -1,0 +1,21 @@
+开发机 vs2013  + wdk8.1
+vmware   win10    C:\Program Files (x86)\Windows Kits\8.1\Remote\x64
+
+vs2013 错误等级3  将警告不视为错误 
+
+取消sign
+
+bcdedit /testsigning on 
+win + I 更新和安全    恢复  高级启动 立即重新启动  重启 f7  关闭签名验证
+
+
+2013 编译 然后赋值到vmware 中  然后 
+
+
+
+sc create <DriverName> type= kernel binPath= <PathToDriver\Driver.sys>
+
+
+sc start <DriverName>
+stop 
+delete
