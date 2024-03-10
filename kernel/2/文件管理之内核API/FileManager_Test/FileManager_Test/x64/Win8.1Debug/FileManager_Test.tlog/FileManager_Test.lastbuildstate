@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.5:PlatformToolSet=WindowsKernelModeDriver8.1:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit
+Win8.1 Debug|x64|C:\Users\fuckjp\Downloads\WINDOWS黑客编程技术详解\内核层\2\文件管理之内核API\FileManager_Test\|
